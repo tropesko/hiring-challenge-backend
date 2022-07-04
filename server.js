@@ -7,7 +7,8 @@ const cors = require("cors");
 
 dotenv.config();
 const port = process.env.PORT || 4000;
-const db_access = process.env.DATABASE_ACCESS;
+const db_access =
+  "mongodb+srv://admin:l0vehina@cluster0.zqiuc.mongodb.net/usertable?retryWrites=true&w=majority";
 
 mongoose.connect(db_access, () => console.log("Database connected"));
 
