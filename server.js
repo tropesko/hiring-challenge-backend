@@ -7,10 +7,9 @@ const cors = require("cors");
 
 dotenv.config();
 const port = process.env.PORT || 4000;
-const DATABASE_ACCESS =
-  "mongodb+srv://admin:l0vehina@cluster0.zqiuc.mongodb.net/usertable?retryWrites=true&w=majority";
+const db_access = process.env.DATABASE_ACCESS;
 
-mongoose.connect(DATABASE_ACCESS, () => console.log("Database connected"));
+mongoose.connect(db_access, () => console.log("Database connected"));
 
 app.use(express.json());
 app.use(cors());
