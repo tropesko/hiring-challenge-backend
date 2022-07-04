@@ -15,4 +15,4 @@ mongoose.connect(DATABASE_ACCESS, () => console.log("Database connected"));
 app.use(express.json());
 app.use(cors());
 app.use(routesUrls);
-app.listen(port, () => console.log("server is up!"));
+app.listen(port, () => console.log(`server is up on port ${port}`));
